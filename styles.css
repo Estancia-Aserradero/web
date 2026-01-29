@@ -1,0 +1,308 @@
+/* ESTRUCTURA GENERAL */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+/* FONDO DIFUMINADO DETRÁS DE TODO */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('otroman.jpeg') center/cover no-repeat;
+    filter: blur(8px); /* difumina la imagen */
+    z-index: -1;       /* queda detrás de todo */
+    
+    /* Opcional: oscurecer un poco el fondo para que el contenido resalte */
+    background-color: rgba(0,0,0,0.35);
+    background-blend-mode: overlay;
+}
+
+
+/* SECCIONES */
+.section-block {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+/* FOOTER */
+.footer-block {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.social-icon {
+    width: 40px;
+    margin: 0 10px;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  z-index: 100;
+}
+
+/* Contenedor interno centrado */
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* TOP RIGHT + WHATSAPP */
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-right span {
+    font-size: 0.9rem;
+}
+
+/* WHATSAPP INLINE */
+.whatsapp-inline img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-inline img:hover {
+    transform: scale(1.15);
+}
+
+/* MENU */
+.main-menu {
+    display: flex;
+    justify-content: center;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    z-index: 9;
+}
+
+.main-menu a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.main-menu a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* WHATSAPP FLOTANTE (si luego lo quieres usar) */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* FOTOS */
+.gallery-section {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  margin: 40px 0 20px;
+  font-size: 28px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery img {
+  width: 105%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+   /* Airbnb */
+ .airbnb-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.airbnb-section h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.airbnb-card {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.airbnb-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.airbnb-info {
+  padding: 25px;
+}
+
+.airbnb-info h3 {
+  margin-bottom: 10px;
+}
+
+.airbnb-info p {
+  color: #555;
+}
+
+.airbnb-btn {
+  display: inline-block;
+  margin-top: 18px;
+  background: #FF5A5F;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.airbnb-btn:hover {
+  background: #e0484d;
+}
+ 
+.location-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.location-link:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+/* Ubicaciones */
+.maps-links {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 22px;
+  margin: 10px;
+
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+
+  white-space: nowrap; /* 👈 EVITA que el texto se rompa */
+  transition: transform 0.2s ease;
+}
+
+.map-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Colores */
+.map-btn.google { background:#4285F4; color:white; }
+.map-btn.apple  { background:#000;     color:white; }
+.map-btn.waze   { background:#33ccff;  color:#000; }
+
+.map-btn:hover {
+  transform: scale(1.05);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+ 
+    .main-menu {
+        padding: 0 12px;   /* espacio a los lados */
+        box-sizing: border-box;
+    }
+
+    .main-menu a {
+        padding: 12px 14px; /* reduce un poco el ancho del botón */
+        font-size: 0.85rem;
+    }
+}
+    .header-container {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .top-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+
+    .main-menu {
+        top: 95px; /* antes estaba muy alto */
+    }
+
