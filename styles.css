@@ -319,7 +319,10 @@ padding: 25px;
 }
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
- 
+     body {
+        background-attachment: scroll; /* en móviles ya no es fijo */
+        background-position: center top; /* opcional: ajusta la parte visible */
+    }
     .main-menu {
         padding: 0 12px;   /* espacio a los lados */
         box-sizing: border-box;
@@ -346,4 +349,3 @@ padding: 25px;
     .main-menu {
         top: 95px; /* antes estaba muy alto */
     }
-
