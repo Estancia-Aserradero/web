@@ -25,7 +25,7 @@ body {
 .section-ofresemos {
   padding: 3rem 2rem;
   text-align: center;
-  background: rgba(0,0,0,0.3); /* deja ver el fondo */
+  background: rgba(0, 0, 0, 0.76); /* deja ver el fondo */
   max-width: 950px;
   margin: auto;
   backdrop-filter: blur(4px); /* efecto elegante */
